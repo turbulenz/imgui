@@ -386,7 +386,7 @@ static stbrp__findresult stbrp__skyline_find_best_pos(stbrp_context *c, int widt
             }
          }
          tail = tail->next;
-      }         
+      }
    }
 
    fr.prev_link = best;
@@ -456,17 +456,14 @@ static stbrp__findresult stbrp__skyline_pack_rectangle(stbrp_context *context, i
    STBRP_ASSERT(cur->next == NULL);
 
    {
-      stbrp_node *L1 = NULL, *L2 = NULL;
       int count=0;
       cur = context->active_head;
       while (cur) {
-         L1 = cur;
          cur = cur->next;
          ++count;
       }
       cur = context->free_head;
       while (cur) {
-         L2 = cur;
          cur = cur->next;
          ++count;
       }
