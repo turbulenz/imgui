@@ -462,6 +462,7 @@ struct ImGuiState
         SetNextWindowCollapsedVal = false;
         SetNextWindowPosCond = 0;
         SetNextWindowSizeCond = 0;
+        SetNextWindowContentSizeCond = 0;
         SetNextWindowCollapsedCond = 0;
         SetNextWindowFocus = false;
         SetNextTreeNodeOpenedVal = false;
@@ -597,7 +598,7 @@ struct IMGUI_API ImGuiWindow
     ImVec2                  ScrollTarget;                       // target scroll position. stored as cursor position with scrolling canceled out, so the highest point is always 0.0f. (FLT_MAX for no change)
     ImVec2                  ScrollTargetCenterRatio;            // 0.0f = scroll so that target position is at top, 0.5f = scroll so that target position is centered
     bool                    ScrollbarX, ScrollbarY;
-    ImVec2                  ScrollbarSizes;                     // 
+    ImVec2                  ScrollbarSizes;                     //
     bool                    Active;                             // Set to true on Begin()
     bool                    WasActive;
     bool                    Accessed;                           // Set to true when any widget access the current window
